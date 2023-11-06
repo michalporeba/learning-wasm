@@ -9,3 +9,7 @@ collatz:
 grains:
 	wat2wasm grains.wat -o grains.wasm 
 	node grains.js
+
+root:
+	wat2wasm root.wat -o root.wasm 
+	node root.js

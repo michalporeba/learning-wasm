@@ -15,3 +15,12 @@ Example with the first addition file
 wat2wasm add.wat -o add.wasm
 node add.js
 ```
+
+Exercises can be executed with `make`
+
+```
+make add
+make collatz
+make grains
+make root
+```
