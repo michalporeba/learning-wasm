@@ -10,6 +10,10 @@ grains:
 	wat2wasm grains.wat -o grains.wasm 
 	node grains.js
 
+pop-count:
+	wat2wasm pop-count.wat -o pop-count.wasm
+	node pop-count.js
+
 root:
 	wat2wasm root.wat -o root.wasm 
 	node root.js

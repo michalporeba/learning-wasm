@@ -22,5 +22,6 @@ Exercises can be executed with `make`
 make add
 make collatz
 make grains
+make pop-count
 make root
 ```
