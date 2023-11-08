@@ -5,24 +5,23 @@
     local.set $eggs
   
     (loop $step
+      ;; isolate the last bit 0 or 1
       local.get $number
       i32.const 1 
       i32.and 
 
-      (if 
-        (then 
-          local.get $eggs
-          i32.const 1 
-          i32.add 
-          local.set $eggs 
-        )
-      )  
+      ;; add the value to the eggs counter
+      local.get $eggs
+      i32.add 
+      local.set $eggs
 
+      ;; shift the bits right
       local.get $number 
       i32.const 1
       i32.shr_u
-      local.set $number 
-      local.get $number 
+      local.tee $number 
+      
+      ;; loop while number is greater than 0
       br_if $step
     )
     local.get $eggs
